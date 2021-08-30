@@ -3,7 +3,7 @@ package Section_1_OOP;
 public class Q1_Class {
     public static void main(String[] args) {
         // Dog Object
-        Cat c = new Cat();
+        Cat1 c = new Cat1();
 
         c.name = "Malo";
         c.breeds = "Peritian";
@@ -17,7 +17,7 @@ public class Q1_Class {
 }
 
 /* Dog Class */
-class Cat {
+class Cat1 {
     /* 1. Filed */
     String name;
     String breeds;
