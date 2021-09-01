@@ -1,6 +1,6 @@
 package Section_3_Reference_Static;
 
-public class Q7_Static_Variable {
+public class Q4_Static_Variable {
     public static void main (String[] args) {
         // 5칸 크기의 객체 배열 생성
         Galaxy[] phones = new Galaxy[5];
