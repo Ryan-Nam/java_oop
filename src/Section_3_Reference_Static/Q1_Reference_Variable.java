@@ -2,7 +2,7 @@ package Section_3_Reference_Static;
 
 public class Q1_Reference_Variable {
     public static void main(String[] args) {
-        // 배열 생성
+        // Sunday to Saturday 0~6
         int[] hours0 = { 2, 4, 3, 4, 5, 8, 8 };
         int[] hours1 = { 7,	3, 4, 3, 3, 4, 4 };
         int[] hours2 = { 3, 3, 4, 3, 3, 2, 2 };
@@ -12,7 +12,7 @@ public class Q1_Reference_Variable {
         int[] hours6 = { 3, 7, 4, 8, 3, 8, 4 };
         int[] hours7 = { 6 ,3, 5, 9, 2, 7, 9 };
 
-        // 객체 생성
+        // Object
         Employee e0 = new Employee("직원0", hours0);
         Employee e1 = new Employee("직원1", hours1);
         Employee e2 = new Employee("직원2", hours2);
@@ -22,30 +22,28 @@ public class Q1_Reference_Variable {
         Employee e6 = new Employee("직원6", hours6);
         Employee e7 = new Employee("직원7", hours7);
 
-
-        // 객체 배열 만들기
+        // Array of object
         Employee[] employees = { e0, e1, e2, e3, e4, e5, e6, e7 };
 
-        // 정보 출력
         for (int i = 0; i < employees.length; i++) {
             employees[i].printTotalHours();
         }
     }
 }
 
-// 직원 클래스
+//Class
 class Employee {
-    // 필드
-    String name; // 이름
-    int[] hours; // 요일별 일한 시간
+    // Field
+    String name; // name
+    int[] hours; // time to work based on days
 
-    // 생성자
+    // Constructor
     Employee(String str, int[] arr) {
         name = str;
         hours = arr;
     }
 
-    // 메소드
+    // method
     void printTotalHours() {
         System.out.printf("%s -> %d 시간\n", name, totalHours());
     }
