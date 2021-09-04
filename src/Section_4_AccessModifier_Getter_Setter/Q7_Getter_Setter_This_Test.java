@@ -2,17 +2,16 @@ package Section_4_AccessModifier_Getter_Setter;
 
 public class Q7_Getter_Setter_This_Test {
     public static void main(String[] args) {
-        // 객체 생성
-        Knight k1 = new Knight("돈키호테", 30);
-        // 정보 출력
-        System.out.println("[객체 생성]");
-        System.out.printf("Knight { name: 돈키호테, hp: %d }\n", k1.getHp());
+
+        Knight k1 = new Knight("Marine", 30);
+
+        System.out.println("[Object build]");
+        System.out.printf("%s\n", k1.toString());
 
         k1.setHp(k1.getHp()+30);
-        // 체력 증가: 기존 체력 + 30
-        // 결과 출력
-        System.out.println("[체력 증가 +30]");
-        System.out.printf("Knight { name: 돈키호테, hp: %d }", k1.getHp());
+
+        System.out.println("[HP increased +30]");
+        System.out.printf("%s\n", k1.toString());
     }
 }
 
@@ -28,11 +27,13 @@ class Knight {
         this.hp = hp;
     }
 
-    Knight (String name, int hp) {
+    public Knight (String name, int hp) {
         this.name = name;
         this.hp = hp;
     }
-    // 게터
-    // 세터
+
+    public String toString(){
+        return String.format("Knight { name: %s, hp: %d}", this.name, this.hp);
+    }
 }
 

@@ -14,10 +14,8 @@ public class Q4_Setter {
 }
 
 class Lock {
-    // 필드
     private String password;
 
-    // 생성자
     public Lock(String p) {
         password = p;
     }
@@ -26,10 +24,8 @@ class Lock {
         password = s;
     }
 
-    // 메소드
     public String toString() {
         return String.format("Lock { password: %s }", password);
     }
 
-    /* 2. 비밀번호 변경을 위한, 세터 메소드를 추가하시오. */
 }
