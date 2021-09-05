@@ -9,6 +9,7 @@ public class Q2_Dice_100Times {
 
         System.out.printf("A: %d\n", a);
         System.out.printf("B: %d\n", b);
+
     }
 }
 

@@ -7,11 +7,21 @@ import java.util.Random;
 public class Q1_Random_API {
     public static void main(String[] args) {
 
-        int a = DieA1.roll();
-        int b = DieB1.roll();
+        int[] counts = new int[13];
 
-        System.out.printf("A: %d\n", a);
-        System.out.printf("B: %d\n", b);
+        for (int i = 0; i < 100; i++) {
+            int a = DieA1.roll();
+            int b = DieB1.roll();
+            counts[a + b]++;
+        }
+
+        for (int row = 2; row < counts.length; row++) {
+            System.out.printf(" %d => ", row);
+            for (int r = 0; r < counts[row]; r ++){
+                System.out.print("#");
+            }
+            System.out.println();
+        }
     }
 }
 
