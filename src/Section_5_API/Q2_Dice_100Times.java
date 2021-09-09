@@ -1,15 +1,28 @@
-package Section_5_Inheritance;
+package Section_5_API;
 
 import java.util.Random;
 
 public class Q2_Dice_100Times {
     public static void main(String[] args) {
-        int a = DieA.roll();
-        int b = DieB.roll();
 
-        System.out.printf("A: %d\n", a);
-        System.out.printf("B: %d\n", b);
+        int [] arr = new int[13];
 
+        for (int k = 0; k <100; k++){
+            int a = DieA.roll();
+            int b = DieB.roll();
+            arr[a+b]++;
+        }
+
+
+
+        for (int i = 2; i < arr.length; i++) {
+            System.out.printf("%d => ", i);
+            for (int j = 0; j < arr[i]; j++) {
+                System.out.printf("#");
+            }
+            System.out.println();
+            //System.out.println(arr[i]);
+        }
     }
 }
 

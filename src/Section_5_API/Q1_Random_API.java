@@ -1,4 +1,4 @@
-package Section_5_Inheritance;
+package Section_5_API;
 
 import java.lang.Math;
 import java.util.Random;
